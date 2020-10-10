@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+      
+
+ 
+		<menuitem id="menu_parts_catelogs_root"  name="API Testing" web_icon="parts_catelogs_connector,static/description/menu_icon.png" />
+    <!-- <menuitem id="menu_cargo_tracker_root"  name="Operations" web_icon="cargo_tracker,static/description/menu_icon.png" /> -->
+		
+
+		<menuitem id="menu_parts_catelogs_forms" parent="menu_parts_catelogs_root"
+                      name="Form" sequence="10" />
+		<menuitem id="menu_parts_catelogs_connector_form" parent="menu_parts_catelogs_forms" name="API Testing" action="parts_catelogs_api_action"  />
+		
+		
+		
+		
+	
+    </data>
+</odoo>

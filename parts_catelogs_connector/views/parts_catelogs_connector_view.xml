@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="parts_catelogs_form_view">
+            <field name="name">PartsCatelogs</field>
+            <field name="model">parts.catelogs</field>
+            <field name="arch" type="xml">
+                <form string="API Testing">
+                    
+                    <header>
+                        <button name="get_ip"  string="Get IP" class="oe_highlight" type="object"/>
+                        <button name="get_catalogs"  string="Get Catelogs" class="oe_highlight" type="object"/>
+                        
+                    </header>
+                    
+                    <sheet>
+                
+                  
+                            <group>
+                                <field name="name"/>
+                                
+                    
+                            </group>
+
+                             <group>
+                                <field name="url_ip"/>
+                                <field name="url_catelog"/>
+                                
+                                <field name="api_key"/>
+                    
+                            </group>
+
+                            <group>
+                                <field name="result"/>
+                                
+                    
+                            </group>
+                       
+                    </sheet>
+                   
+                </form>
+            </field>
+        </record>
+
+        
+
+        <record model="ir.ui.view" id="parts_catelogs_tree_view">
+            <field name="name">Parts Catelogs</field>
+            <field name="model">parts.catelogs</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string='API Testing'>
+                        <field name="name"/>
+                        <field name="url_ip"/>
+                        <field name="url_catelog"/>
+                        <field name="api_key"/>
+                      
+                </tree>
+            </field>
+        </record>
+
+        <record id="parts_catelogs_api_action" model="ir.actions.act_window">
+            <field name="name">API Testing</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">parts.catelogs</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="view_id" ref="parts_catelogs_tree_view"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to Create New API Testing.
+                </p>
+            </field>
+        </record>
+
+  </data>
+</odoo>
